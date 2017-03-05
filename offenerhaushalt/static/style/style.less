@@ -1,7 +1,25 @@
 @bgColor: lighten(#dee0e2, 0%);
-@linkColor: #265475;
-@brandColor: #42928F;
+@linkColor: #F0824B;
+@brandColor: #FCBD33;
+@mainColor: #FCBD33;
+@complementColor: #F0824B;
 
+.odwlogo {
+  position: absolute;
+  right: 0em;
+  z-index: 1000;
+  display: block;
+  border-color: @complementColor @complementColor transparent transparent;
+  border-style: solid;
+  border-width: @innerSpace/2;
+  width: 0;
+  height: 0;
+  pointer-events: auto;
+}
+
+.odwlogo:hover {
+  border-color: @mainColor @mainColor transparent transparent;
+}
 
 html {
   background-color: @bgColor;
@@ -259,7 +277,7 @@ h1.page-header.site {
     box-sizing: border-box;
     z-index: 5;
     font-weight: 300;
-    text-shadow: -2px -2px 13px rgba(150, 150, 150, 0.9);
+    text-shadow: 1px 1px 1px rgba(100, 100, 100, 0.9);
   }
 
   .amount {
